@@ -1,1 +1,1 @@
-commands in in commands.html
+commands in in commands.html -- not all
