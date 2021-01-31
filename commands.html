@@ -56,3 +56,27 @@ it will be pushed from where u cloned
 
 # branch -- show all the branches
 command -- git branch
+
+# git checkout -b <branch name>   -- this will create a branch
+
+# git checkout </branch>    -- to switch branch
+
+# git diff <another branch>     -- to compare compare current branch with the mentioned branch
+
+# how branching works -- we make a branch to make changes in the code that are in the main/master branch or in the main code
+# changes made in one branch doesn't reflect in another branch
+# after done making changes -- we merge branches
+
+# merging branches
+# we merge branches by PR(pull request)
+# PR means we want to pull content of sub branch into the main branch so that modified code can be updated in main branch also
+1 git push -u origin <sub branch>   -- to upload your branch on github (only upload not PR or merged)
+2 go to github -- make PR -- after this merging is done
+3 git pull  -- to merge in locally(in vscode)
+4 git branch -d <branch name>   -- to delete a branch (we generally delete subbranches after use)
+
+# git diff  -- to see changes since the last commit in current branch
+
+# git commit -am <msg>  -- to add and commit both -- works only for modified files not for newly created
+
+# if u switch b/w branches locally before commit then u will lost your changes -- so commit before swithching
