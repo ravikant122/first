@@ -79,4 +79,10 @@ command -- git branch
 
 # git commit -am <msg>  -- to add and commit both -- works only for modified files not for newly created
 
-# if u switch b/w branches locally before commit then u will lost your changes -- so commit before swithching
+# if u switch b/w branches locally before commit then u will lost your changes -- so commit before switching
+
+# if two persons working on two diff branches but on the same file -- then merging conflicts generates
+# to resolve that -- commit changes in both branches then use 
+# git merge <other branch>  -- this will gives the files have changes from both the branches
+# and then those file in vscode and select which code u want to stay and which to delete
+# after this commit and merging conflicts are gone and file is commited with desired changes considered all branches
