@@ -38,5 +38,21 @@ ssh-add ~/.ssh/id_rsa    or   ssh-add (it will add default files)
 # push 
 it uploads local repo to github repo
 command -- git push <remote> <branch>
-eg. -- git push origin master
+eg. -- git push origin master           - this will work if your github contains at least two repo
 eg. -- git push origin main             - if your github doesn't have master branch 
+it will be pushed from where u cloned
+
+# how to create a repo in vscode and then upload in github
+1 create a folder
+2 go into that folder 
+3 git init  -- this will make your folder a repo but locally
+4 create some file, add and commit
+5 now if u do normal push -- it will show error that it don't know where to upload bcoz there is no connection
+6 so to make connection 
+7 create a empty repo in github and copy its address and then
+8 git remote add origin <url>
+9 to see connection -- git remote -v
+10 git push -u origin master    (now master bcoz our github has two branches)
+
+# branch -- show all the branches
+command -- git branch
