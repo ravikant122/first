@@ -7,3 +7,4 @@ this is from merging-conflicts branch
 
 second try for merge conflicts
 this is from sub branch
+this is from main branch
