@@ -101,3 +101,10 @@ command -- git reset HEAD~x -- it will take u to last (x+1)th commit -- and undo
 eg. git reset HEAD~1    -- our last commit was before this undoing so that will be 0th commit and we want to undo it 
                            that's why we are going to one commit before last commit -- 1 one commit before last commit
 after this all changes will be unstaged -- so we have to add and commit both
+
+# git log -- shows all commits with their hash from recent to earliest
+
+# undo to a specific commit
+1 git log 
+2 pick hash of a commit
+3 git reset --hard <hash>
