@@ -69,10 +69,10 @@ command -- git branch
 # merging branches
 # we merge branches by PR(pull request)
 # PR means we want to pull content of sub branch into the main branch so that modified code can be updated in main branch also
-1 git push -u origin <sub branch>   -- to upload your branch on github (only upload not PR or merged)
+1 git push -u origin <sub branch>   -- to upload your sub branch on github (only upload not PR or merged)
 2 go to github -- make PR -- after this merging is done
-3 git pull  -- to merge in locally(in vscode)
-4 git branch -d <branch name>   -- to delete a branch (we generally delete subbranches after use)
+3 git pull -- to merge in locally(in vscode) -- do this in that branch in which u want to pull the code of some other branch
+4 git branch -d <sub branch>   -- to delete a branch (we generally delete subbranches after use) -- do this in main branch
 
 # git diff  -- to see changes since the last commit in current branch
 
@@ -80,8 +80,24 @@ command -- git branch
 
 # if u switch b/w branches locally before commit then u will lost your changes -- so commit before switching
 
+# merge conflicts
 # if two persons working on two diff branches but on the same file -- then merging conflicts generates
 # to resolve that -- commit changes in both branches then use 
-# git merge <other branch>  -- this will gives the files have changed from both the branches means files have conflicts
-# and then those file in vscode and select which code u want to stay and which to delete
-# after this commit and merging conflicts are gone and file is commited with desired changes considered all branches
+# git merge <other branch>  -- code of mentioned branch will be merged into your current branch -- so do this in sub branch
+# this will give you options which code u want to stay and which to delete
+# after selecting your sub branch in ready -- so now merge with main branch
+# after this make a PR and update code of main branch in github
+# git pull -- to update in vscode also -- do this in main branch
+# now delete sub branch
+
+# undoing
+# when we use add command then the changes are only staged means changes are temporary -- they will permanent when we commit them
+
+# undoing after add
+command -- git reset
+
+# undoing after commit
+command -- git reset HEAD~x -- it will take u to last (x+1)th commit -- and undo all commit after (x+1)th to last commit
+eg. git reset HEAD~1    -- our last commit was before this undoing so that will be 0th commit and we want to undo it 
+                           that's why we are going to one commit before last commit -- 1 one commit before last commit
+after this all changes will be unstaged -- so we have to add and commit both
